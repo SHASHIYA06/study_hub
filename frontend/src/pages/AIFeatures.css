@@ -1,0 +1,113 @@
+.ai-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 32px;
+  padding: 40px 0;
+}
+
+.ai-feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.feature-icon {
+  font-size: 36px;
+}
+
+.feature-icon.doubt {
+  color: #3b82f6;
+}
+
+.feature-icon.concept {
+  color: #f59e0b;
+}
+
+.feature-header h2 {
+  font-size: 24px;
+  color: #1e293b;
+  margin: 0;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.input-textarea,
+.input-field {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-textarea:focus,
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.input-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.result-box {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.doubt-result {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.concept-result {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.result-box h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.result-content p {
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .ai-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
