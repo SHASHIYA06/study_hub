@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "name": "studyhub",
+  "builds": [
+    {
+      "src": "backend/study_hub/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb"
+      }
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/backend/staticfiles/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/backend/media/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/backend/study_hub/wsgi.py"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/backend/study_hub/wsgi.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.11",
+    "YOUTUBE_API_KEY": "@youtube_api_key",
+    "GOOGLE_GEMINI_API_KEY": "@google_gemini_api_key",
+    "SECRET_KEY": "@secret_key",
+    "DEBUG": "False",
+    "ALLOWED_HOSTS": ".vercel.app"
+  }
+}
