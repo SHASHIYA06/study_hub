@@ -1,0 +1,31 @@
+# ========================================
+# VERCEL ENVIRONMENT VARIABLES TEMPLATE
+# ========================================
+# Add these in Vercel Dashboard → Settings → Environment Variables
+
+# Backend API URL (REQUIRED)
+# This should be your Render backend URL
+# Format: https://your-backend-name.onrender.com (no trailing slash)
+# 
+# Steps to get this:
+# 1. Deploy backend to Render first
+# 2. Copy the URL from Render dashboard
+# 3. Paste it here
+# 4. Example: https://studyhub-backend.onrender.com
+REACT_APP_API_URL=https://your-backend-name.onrender.com
+
+# ========================================
+# INSTRUCTIONS FOR VERCEL
+# ========================================
+# 1. Go to https://vercel.com/new
+# 2. Import your GitHub repository (SHASHIYA06/study_hub)
+# 3. Framework Preset: Create React App
+# 4. Root Directory: frontend
+# 5. Click "Environment Variables"
+# 6. Add the variable above:
+#    Name: REACT_APP_API_URL
+#    Value: https://your-backend-name.onrender.com
+# 7. Click "Deploy"
+# 8. Wait 2-3 minutes for deployment
+# 9. Copy your Vercel URL (https://your-app.vercel.app)
+# 10. Go back to Render and update CORS_ALLOWED_ORIGINS with your Vercel URL
