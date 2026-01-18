@@ -29,13 +29,8 @@ DISABLE_COLLECTSTATIC=1
 # API KEYS
 # ========================================
 
-# YouTube Data API v3 Key (REQUIRED)
-# Get from: https://console.cloud.google.com/apis/credentials
-# 1. Create new project
-# 2. Enable YouTube Data API v3
-# 3. Create credentials → API Key
-# 4. Copy the key and paste here
-YOUTUBE_API_KEY=REPLACE_WITH_YOUR_YOUTUBE_API_KEY
+# YouTube Data API v3 Key (CONFIGURED)
+YOUTUBE_API_KEY=AIzaSyAU1vqMfV64ZaNRHzHD0qtSMDXuW5XZoMc
 
 # Google Gemini API Key (ALREADY CONFIGURED)
 GOOGLE_GEMINI_API_KEY=AIzaSyBg12HDcPqhLTUmLUJ4un_n7S3D5ITeZlM
